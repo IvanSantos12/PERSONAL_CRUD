@@ -57,7 +57,7 @@ class Producto extends Conectar{
         $sql="UPDATE tm_producto
             SET
                 prod_nom=?,
-                fech_modi=now()
+                fech_mod=now()
             WHERE
                 prod_id = ?";
         $sql=$conectar->prepare($sql);
@@ -66,6 +66,7 @@ class Producto extends Conectar{
         $sql->execute();
         return $resultado=$sql->fetchAll();
     }
+
 }
 
 
